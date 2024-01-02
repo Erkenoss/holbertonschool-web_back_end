@@ -4,6 +4,6 @@
 from typing import Union, Tuple
 
 
-def to_kv(k: str, v: Union[int, float]) -> Tuple[str, int or float]:
+def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
     """tuple of two element"""
-    return k, (v * v)
+    return k, v * v
