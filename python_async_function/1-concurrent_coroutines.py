@@ -11,8 +11,9 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     """create a list of random"""
     list_r = []
     for element in range(n):
-        element = wait_random(max_delay)
-        list_r.append(element)
+        list_r.append(wait_random(max_delay))
+        # element = wait_random(max_delay)
+        # list_r.append(element)
 
     List_sort = await asyncio.gather(*list_r)
 
