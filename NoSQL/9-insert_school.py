@@ -3,5 +3,6 @@
 
 
 def insert_school(mongo_collection, **kwargs):
+    """ insert id in kwarg """
     rturn = mongo_collection.insert_one(kwargs)
     return rturn.inserted_id
