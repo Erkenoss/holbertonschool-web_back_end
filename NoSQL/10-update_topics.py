@@ -3,6 +3,7 @@
 
 
 def update_topics(mongo_collection, name, topics):
+    """ upadte doc with specific name """
     try:
         result = mongo_collection.update_many(
             {"name": name},
