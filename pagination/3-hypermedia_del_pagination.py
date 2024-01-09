@@ -48,7 +48,7 @@ class Server:
         return index * page_size, page_size * page
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
-
+        """ return dict start on index of the current page """
         assert index is None or (isinstance(index, int) and index >= 0)
         assert isinstance(page_size, int) and page_size > 0
 
@@ -58,7 +58,7 @@ class Server:
         assumed_page = (index // page_size) + 1
         start, end = self.index_range(assumed_page, page_size)
 
-        next_index = end + 1
+        next_index = end
         if next_index > len(self.dataset()):
             next_index = None
 
