@@ -33,6 +33,7 @@ class Server:
         return index * page_size, page_size * page
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """ return list on the index given """
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
 
