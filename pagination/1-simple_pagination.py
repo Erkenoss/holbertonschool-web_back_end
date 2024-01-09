@@ -41,5 +41,6 @@ class Server:
         if start >= len(self.dataset()) or end >= len(self.dataset()):
             return []
 
-        return self.dataset[start:end + 1]
+        dataset = self.dataset()
 
+        return dataset[start:end + 1]
