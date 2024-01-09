@@ -24,6 +24,14 @@ class Server:
 
         return self.__dataset
 
+    def index_range(self, page: int, page_size: int) -> tuple:
+        """
+        return tuple (index 0 of page given and
+        the number of element at the end of the page)
+        """
+        index = page - 1
+        return index * page_size, page_size * page
+
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
@@ -35,14 +43,3 @@ class Server:
 
         return self.dataset[start:end + 1]
 
-
-
-
-
-    def index_range(page: int, page_size: int) -> tuple:
-        """
-        return tuple (index 0 of page given and
-        the number of element at the end of the page)
-        """
-        index = page - 1
-        return index * page_size, page_size * page
