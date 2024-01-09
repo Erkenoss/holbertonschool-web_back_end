@@ -43,4 +43,4 @@ class Server:
 
         dataset = self.dataset()
 
-        return dataset[start:end + 1]
+        return dataset[start:end]
