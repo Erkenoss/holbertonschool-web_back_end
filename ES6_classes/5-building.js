@@ -11,7 +11,7 @@ export default class Building {
   }
 
   static valnumber(value, propertyName) {
-    if (typeof value ==! 'number') {
+    if (typeof value !== 'number') {
       throw new TypeError(`${propertyName} Must be a number`);
     }
     return value;
