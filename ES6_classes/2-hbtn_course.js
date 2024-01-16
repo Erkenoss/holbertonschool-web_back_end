@@ -18,7 +18,8 @@ export default class HolbertonCourse {
   }
 
   set name(newName) {
-    if (typeof newName === 'string') {
+    if (typeof newName === 'string')
+    {
       this._name = newName;
     }
     else
@@ -32,7 +33,8 @@ export default class HolbertonCourse {
     {
         this._length = newLength;
     }
-    else {
+    else
+    {
         throw new TypeError('Length must be a number');
     }
   }
