@@ -1,14 +1,12 @@
 import signUpUser from './4-user-promise';
-import uploadPhoto from './5-photo-reject.js';
+import uploadPhoto from './5-photo-reject';
 
 export default function handleProfileSignup(firstName, lastName, fileName) {
   return Promise.all([
     signUpUser(firstName, lastName),
-    uploadPhoto(fileName)
+    uploadPhoto(fileName),
   ])
-    .then(([signUpResult, uploadResult]) => {
-      return [[{ ...signUpResult }, { ...uploadResult }]];
-    })
+    .then(([signUpResult, uploadResult]) => [[{ ...signUpResult }, { ...uploadResult }]])
     .catch((error) => {
       throw error;
     });
