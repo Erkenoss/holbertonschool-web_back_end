@@ -1,5 +1,4 @@
-export default function setFromArray(array)
-{
+export default function setFromArray(array) {
   if (!Array.isArray(array)) {
     return [];
   }
